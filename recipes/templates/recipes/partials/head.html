@@ -160,7 +160,7 @@
         .main-content-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2rem;
+            gap: var(--spacing-gutter-large);
         }
 
         .recipe {
@@ -168,6 +168,7 @@
             box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
             transition: all 300ms ease-in-out;
             border-radius: .5rem;
+            transform: scale(1);
             overflow: hidden;
         }
 
@@ -186,6 +187,7 @@
 
         .recipe-title-container {
             padding: 2rem;
+            padding-bottom: calc(var(--spacing-gutter-medium)/2);
         }
 
         .recipe-author {
@@ -219,7 +221,11 @@
         }
 
         .recipe-meta {
-            margin: 0 2rem;
+            display: flex;
+            flex-flow: column nowrap;
+            flex-shrink: 1;
+            flex-grow: 1;
+            text-align: center;
         }
 
         .recipe-meta-title {
@@ -242,6 +248,25 @@
 
         .olho {
             margin-right: 1rem;
+        }
+
+        .main-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--color-primary-dark);
+            color: var(--color-white);
+            padding: var(--spacing-gutter-large);
+        }
+
+        .main-footer a {
+            color: var(--color-gray-1);
+            text-decoration: none;
+            transition: all 300ms ease-in-out;
+        }
+
+        .main-footer a:hover {
+            color: var(--color-gray-3);
         }
     </style>
     <!--Fontawesome-->
